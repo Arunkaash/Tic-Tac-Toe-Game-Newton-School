@@ -1,0 +1,129 @@
+* {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.container {
+    margin-top: 50px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+#tac {
+    color: rgba(255, 255, 255, 0.801);
+}
+
+#title h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* div styling */
+
+#div1,
+#div2,
+#div3,
+#div4,
+#div5,
+#div6,
+#div7,
+#div8,
+#div9 {
+    border: 2px solid rgba(4, 92, 92, 0.678);
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#div1,
+#div4,
+#div7 {
+    border-left: none;
+}
+
+#div3,
+#div6,
+#div9 {
+    border-right: none;
+}
+
+#div1,
+#div2,
+#div3 {
+    border-top: none;
+}
+
+#div7,
+#div8,
+#div9 {
+    border-bottom: none;
+}
+
+#result {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+#button {
+    display: none;
+}
+
+
+/* footer with animation */
+
+#footer {
+    height: 30px;
+    background: linear-gradient(90deg, #0600b825 0%, #05b16f52 100%);
+}
+
+#footer div {
+    padding: 5px;
+    float: right;
+}
+
+.demo {
+    background: linear-gradient(#2193b0, #6dd5ed);
+    text-align: center;
+}
+
+
+/* developer information animation */
+
+.text-effect {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 13px;
+    font-weight: 70;
+    display: inline-block;
+    position: relative;
+}
+
+.text-effect:before {
+    content: attr(data-effect);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    right: 0;
+    clip-path: polygon(0% 0%, 30% 0%, 30% 100%, 0% 100%);
+    animation: slide 4s 1s linear infinite;
+}
+
+@keyframes slide {
+    50% {
+        clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%);
+    }
+}
