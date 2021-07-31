@@ -2,24 +2,65 @@
 <html lang="en">
 
 <head>
-    <title>Tic Tac Toe Game</title>
+    <title>Tic Tac Toe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" src="assets/css/bootstrap.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/scripts/app.js" defer></script>
-
 </head>
 
 <body>
+    <div class="container-fluid">
 
-    <div class="container">
+        <!-- game audio section -->
+        <audio controls autoplay id="bgAudio" src="audio/main_music.mp3"></audio>
+        <audio id="clickSound" src="audio/click_sound.wav" autoplay="false"></audio>
+        <audio id="winnerSound" src="audio/winner_sound.mp3" autoplay="false"></audio>
+        <audio id="resetSound" src="audio/reset_sound.wav" autoplay="false"></audio>
+        <audio id="drawSound" src="audio/drawSound.wav" autoplay="false"></audio>
+
+        <!-- game window -->
+        <div class="container" style="max-width: 400px;">
+            <div id="title">
+                <!-- game name -->
+                <h3> <strong>Tic <span id="tac">Tac</span> Toe</strong></h3>
+                <hr>
+            </div>
+            <div class="row">
+                <div id="div1" class="col" onclick="fill(this)"></div>
+                <div id="div2" class="col" onclick="fill(this)"></div>
+                <div id="div3" class="col" onclick="fill(this)"></div>
+            </div>
+            <div class="row">
+                <div id="div4" class="col" onclick="fill(this)"></div>
+                <div id="div5" class="col" onclick="fill(this)"></div>
+                <div id="div6" class="col" onclick="fill(this)"></div>
+            </div>
+            <div class="row">
+                <div id="div7" class="col" onclick="fill(this)"></div>
+                <div id="div8" class="col" onclick="fill(this)"></div>
+                <div id="div9" class="col" onclick="fill(this)"></div>
+            </div>
+            <div class="row">
+                <div id="result"></div>
+                <button type="button" id="button" class="btn btn-warning" onclick="click()">Reset</button>
+            </div>
+
+        </div>
+        <!-- developer information -->
+        <footer id="footer">
+            <div class="text-effect" data-effect="Developed By Arun">Developed By Arun</div>
+        </footer>
 
     </div>
-
 </body>
 
 </html>
